@@ -15,19 +15,62 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-box 
+      <a-text
+        id="texto1"
+        value="Predio verde"
         look-at="[gps-camera]"
-		material="color: yellow"
-        scale="10 10 10"
-        gps-entity-place="latitude: 44.4773606; longitude: 26.1214544;"
-      ></a-box>
-      <a-box 
+        scale="1 1 1"
+        gps-entity-place="latitude: -44.4779309; longitude: -26.1216852;"
+        position="0 0 0"
+      ></a-text>
+      <a-box
         look-at="[gps-camera]"
-		material="color: red"
-        scale="10 10 10"
-        gps-entity-place="latitude: 44.47741; longitude: 26.12191;"
+        scale="1 1 1"
+        color="tomato"
+        gps-entity-place="latitude: -44.4779709; longitude: -26.1216852;"
+        position="0 30 0"
       ></a-box>
-      <a-camera gps-camera rotation-reader> </a-camera>
+      
+      <a-image src: width height></a-image>
+
+      <a-text
+        id="texto2"
+        value="Predio marrom"
+        look-at="[gps-camera]"
+        scale="1 1 1"
+        gps-entity-place="latitude: -44.4779309; longitude: -26.1226852;"
+        position="0 30 0"
+      ></a-text>
+      <a-box
+        look-at="[gps-camera]"
+        scale="1 1 1"
+        color="tomato"
+        gps-entity-place="latitude: -44.4769409; longitude: -26.1219852;"
+        position="0 30 0"
+      ></a-box>
+
+      <a-text
+        id="texto3"
+        value="Predio amarelo"
+        look-at="[gps-camera]"
+        scale="1 1 1"
+        gps-entity-place="latitude: -44.47796309; longitude: -26.1211852;"
+      ></a-text>
+      <a-box
+        look-at="[gps-camera]"
+        scale="1 1 1"
+        color="tomato"
+        gps-entity-place="latitude: -44.4779409; longitude: -26.1236852;"
+      ></a-box>
+
+      <a-camera
+        id="xcamera"
+        look-controls-enabled="false"
+        arjs-look-controls="smoothingFactor: 0.1"
+        gps-camera="gpsMinDistance: 1"
+        rotation-reader
+      >
+      </a-camera>
     </a-scene>
   </body>
 </html>
