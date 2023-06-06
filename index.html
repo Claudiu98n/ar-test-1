@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>final test</title>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
-</head>
-<body>
-<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4779309; longitude: 26.1216852;" position="0 72 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4809309; longitude: 26.1226852;" position="0 73 0" scale="10 10 10" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4799309; longitude: 26.1236852;" position="0 74 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4809309; longitude: 26.1246852;" position="0 75 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4819309; longitude: 26.1196852;" position="0 76 0" scale="10 10 10" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4829309; longitude: 26.1206852;" position="0 77 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.4839309; longitude: 26.1209852;" position="0 78 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47802; longitude: 26.12221;" position="0 78 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47796; longitude: 26.12219;" position="0 79 0" scale="10 10 10" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47792; longitude: 26.12219;" position="0 80 0" scale="5 5 5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47771; longitude: 26.12214;" position="0 81 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47744; longitude: 26.12205;" position="0 82 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47740; longitude: 26.12182;" position="0 83 0" scale="10 10 10" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47737; longitude: 26.12155;" position="0 84 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47735; longitude: 26.12155;" position="0 85 0" scale="10 10 10" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47733; longitude: 26.12155;" position="0 86 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47730; longitude: 26.12155;" position="0 87 0" scale="5 5 5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47732; longitude: 26.12155;" position="0 88 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47731; longitude: 26.12155;" position="0 90 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-    <a-box material="color: blue" gps-entity-place="latitude: 44.47736; longitude: 26.12155;" position="0 95 0" scale="3.5 3.5 3.5" rotation="0 180 0"> </a-box>
-</a-scene>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Location-based AR.js demo</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-text
+        value="Parcare"
+        look-at="[gps-camera]"
+        scale="50 50 50"
+        gps-entity-place="latitude: 44.4779321; longitude: 26.1216846;"
+      ></a-text>
+      <a-camera gps-camera rotation-reader> </a-camera>
+    </a-scene>
+  </body>
 </html>
-
-
